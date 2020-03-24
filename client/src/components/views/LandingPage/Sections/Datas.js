@@ -2,33 +2,33 @@
 const price = [
     {
         "_id": 0,
-        "name": "Any",
+        "name": "전체",
         "array": []
     },
     {
         "_id": 1,
-        "name": "$0 to $199",
-        "array": [0, 199]
+        "name": "2019",
+        "array": [2019,2019]
     },
     {
         "_id": 2,
-        "name": "$200 to $249",
-        "array": [200, 249]
+        "name": "2018",
+        "array": [2018,2018]
     },
     {
         "_id": 3,
-        "name": "$250 to $279",
-        "array": [250, 279]
+        "name": "2017",
+        "array": [2017,2017]
     },
     {
         "_id": 4,
-        "name": "$280 to $299",
-        "array": [280, 299]
+        "name": "2016",
+        "array": [2016,2016]
     },
     {
         "_id": 5,
-        "name": "More than $300",
-        "array": [300, 1500000]
+        "name": "2016 이전",
+        "array": [300, 2015]
     }
 ]
 
@@ -37,31 +37,31 @@ const price = [
 const continents = [
     {
         "_id": 1,
-        "name": "Africa"
+        "name": "국어"
     },
     {
         "_id": 2,
-        "name": "Europe"
+        "name": "한국사"
     },
     {
         "_id": 3,
-        "name": "Asia"
+        "name": "영어"
     },
     {
         "_id": 4,
-        "name": "North America"
+        "name": "사회"
     },
     {
         "_id": 5,
-        "name": "South America"
+        "name": "과학"
     },
     {
         "_id": 6,
-        "name": "Australia"
+        "name": "수학"
     },
     {
         "_id": 7,
-        "name": "Antarctica"
+        "name": "행정"
     }
 ]
 

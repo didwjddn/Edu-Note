@@ -106,7 +106,7 @@ function CartPage(props) {
 
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
-            <h1>My Cart</h1>
+            <h1>My 오답노트</h1>
             <div>
 
                 <UserCardBlock
@@ -117,7 +117,7 @@ function CartPage(props) {
 
                 {ShowTotal ?
                     <div style={{ marginTop: '3rem' }}>
-                        <h2>Total amount: ${Total} </h2>
+                        {/* <h2>Total amount: ${Total} </h2> */}
                     </div>
                     :
                     ShowSuccess ?
@@ -131,7 +131,7 @@ function CartPage(props) {
                         }}>
                             <br />
                             <Empty description={false} />
-                            <p>No Items In the Cart</p>
+                            <p>노트에 아무것도 없습니다.</p>
 
                         </div>
                 }
@@ -141,7 +141,7 @@ function CartPage(props) {
 
             {/* Paypal Button */}
 
-            {ShowTotal &&
+            {/* {ShowTotal &&
 
                 <Paypal
                     toPay={Total}
@@ -150,7 +150,7 @@ function CartPage(props) {
                     transactionCanceled={transactionCanceled}
                 />
 
-            }
+            } */}
 
 
 

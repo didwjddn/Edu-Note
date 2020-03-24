@@ -6,6 +6,7 @@ import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
 import { continents, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
+const Logo =require('./img/title_logo.png');
 
 const { Meta } = Card;
 
@@ -72,7 +73,7 @@ function LandingPage() {
             >
                 <Meta
                     title={product.title}
-                    description={`$${product.price}`}
+                    // description={`$${product.description}`}
                 />
             </Card>
         </Col>
@@ -143,7 +144,8 @@ function LandingPage() {
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h2>  Let's Travel Anywhere  <Icon type="rocket" />  </h2>
+                {/* <h2>  오답? oh,답! </h2> */}
+                <img src={Logo} alt="오답? oh,답!" style={{ width: '30%', margin: '5px' }}></img>
             </div>
 
 

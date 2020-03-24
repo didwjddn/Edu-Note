@@ -87,7 +87,7 @@ export class UploadProductPage extends Component {
         return (
             <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <Title level={2} > Upload Travel Product</Title>
+                <Title level={2} > 오답노트 만들기</Title>
             </div>
 
             <Form onSubmit={this.onSubmit}>
@@ -101,7 +101,7 @@ export class UploadProductPage extends Component {
                     value={this.state.title}
                 />
                 <br /><br />
-                <label>Description</label>
+                <label>문제 설명</label>
                 <TextArea
                     onChange={this.handleChangeDecsription}
                     value={this.state.description}

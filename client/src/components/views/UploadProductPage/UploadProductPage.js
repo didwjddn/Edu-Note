@@ -7,13 +7,13 @@ const { Title } = Typography;
 const { TextArea } = Input;
 
 const Continents = [
-    { key: 1, value: "Africa" },
-    { key: 2, value: "Europe" },
-    { key: 3, value: "Asia" },
-    { key: 4, value: "North America" },
-    { key: 5, value: "South America" },
-    { key: 6, value: "Australia" },
-    { key: 7, value: "Antarctica" }
+    { key: 1, value: "국어" },
+    { key: 2, value: "한국사" },
+    { key: 3, value: "영어" },
+    { key: 4, value: "사회" },
+    { key: 5, value: "과학" },
+    { key: 6, value: "수학" },
+    { key: 7, value: "행정" }
 ]
 
 
@@ -46,6 +46,7 @@ function UploadProductPage(props) {
 
     const updateImages = (newImages) => {
         setImages(newImages)
+    
     }
     const onSubmit = (event) => {
         event.preventDefault();
@@ -68,7 +69,7 @@ function UploadProductPage(props) {
         Axios.post('/api/product/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
-                    alert('Product Successfully Uploaded')
+                    alert('오답노트 업로드 성공!!')
                     props.history.push('/')
                 } else {
                     alert('Failed to upload Product')
@@ -80,7 +81,7 @@ function UploadProductPage(props) {
     return (
         <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <Title level={2}> Upload Travel Product</Title>
+                <Title level={2}> 오답노트 만들기</Title>
             </div>
 
 
@@ -91,27 +92,28 @@ function UploadProductPage(props) {
 
                 <br />
                 <br />
-                <label>Title</label>
+                <label>문제 제목</label>
                 <Input
                     onChange={onTitleChange}
                     value={TitleValue}
                 />
                 <br />
                 <br />
-                <label>Description</label>
+                <label>문제 설명</label>
                 <TextArea
                     onChange={onDescriptionChange}
                     value={DescriptionValue}
                 />
                 <br />
                 <br />
-                <label>Price($)</label>
+                <label>시험 연도</label>
                 <Input
                     onChange={onPriceChange}
-                    value={PriceValue}
+                    defaultValue={2020}
                     type="number"
                 />
                 <br /><br />
+                <label> 시험 과목 : </label>
                 <select onChange={onContinentsSelectChange}>
                     {Continents.map(item => (
                         <option key={item.key} value={item.key}>{item.value} </option>
@@ -123,7 +125,7 @@ function UploadProductPage(props) {
                 <Button
                     onClick={onSubmit}
                 >
-                    Submit
+                   오답노트 업로드
                 </Button>
 
             </Form>
